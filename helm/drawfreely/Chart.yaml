@@ -1,0 +1,15 @@
+apiVersion: v2
+name: drawfreely
+description: A production-ready Helm chart for DrawFreely - Free & Open Source Local-First Virtual Whiteboard
+type: application
+version: 0.1.0
+appVersion: "1.0.0"
+keywords:
+  - whiteboard
+  - diagram
+  - drawing
+  - drawfreely
+  - excalidraw
+  - collaboration
+maintainers:
+  - name: DrawFreely Team

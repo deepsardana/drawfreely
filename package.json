@@ -1,0 +1,23 @@
+{
+  "name": "drawfreely",
+  "description": "DrawFreely - Free & Open Source Local-First Virtual Whiteboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "serve": "node server.mjs",
+    "dev": "node server.mjs",
+    "preview": "node server.mjs",
+    "build": "cross-env VITE_APP_DISABLE_SENTRY=true vite build"
+  },
+  "dependencies": {
+    "@excalidraw/excalidraw": "^0.18.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0"
+  }
+}

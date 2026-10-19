@@ -1,0 +1,268 @@
+.doc-pdf-export-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.15s ease-out;
+}
+
+.doc-pdf-export-dialog {
+  background: var(--island-bg-color, #ffffff);
+  border: 1px solid var(--sidebar-border-color, #e2e8f0);
+  border-radius: 14px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: var(--ui-font, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif);
+}
+
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--sidebar-border-color, #e2e8f0);
+}
+
+.dialog-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-primary-color, #0f172a);
+}
+
+.dialog-title .icon {
+  font-size: 20px;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  color: var(--text-secondary-color, #64748b);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: var(--button-hover-bg, #f1f5f9);
+    color: var(--text-primary-color, #0f172a);
+  }
+}
+
+.dialog-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialog-desc {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-secondary-color, #64748b);
+  line-height: 1.5;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-primary-color, #334155);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  input[type="text"] {
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--sidebar-border-color, #cbd5e1);
+    background: var(--input-bg-color, #ffffff);
+    color: var(--text-primary-color, #0f172a);
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.15s ease;
+
+    &:focus {
+      border-color: var(--color-primary, #6366f1);
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+    }
+  }
+}
+
+.orientation-options {
+  display: flex;
+  gap: 10px;
+}
+
+.radio-pill {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--sidebar-border-color, #cbd5e1);
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  input {
+    margin: 0;
+  }
+
+  &.is-selected {
+    border-color: var(--color-primary, #6366f1);
+    background: rgba(99, 102, 241, 0.08);
+    font-weight: 600;
+    color: var(--color-primary, #6366f1);
+  }
+}
+
+.status-banner {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  font-weight: 500;
+}
+
+.export-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.export-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 14px;
+  background: var(--card-bg, #f8fafc);
+  border: 1px solid var(--sidebar-border-color, #e2e8f0);
+  border-radius: 10px;
+  transition: all 0.15s ease;
+
+  &:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+}
+
+.card-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.card-info {
+  flex: 1;
+
+  h3 {
+    margin: 0 0 2px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-primary-color, #0f172a);
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--text-secondary-color, #64748b);
+    line-height: 1.4;
+  }
+}
+
+.action-btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.pdf-btn {
+    background: #dc2626;
+    color: #ffffff;
+    &:hover:not(:disabled) {
+      background: #b91c1c;
+    }
+  }
+
+  &.doc-btn {
+    background: #2563eb;
+    color: #ffffff;
+    &:hover:not(:disabled) {
+      background: #1d4ed8;
+    }
+  }
+
+  &.print-btn {
+    background: #475569;
+    color: #ffffff;
+    &:hover:not(:disabled) {
+      background: #334155;
+    }
+  }
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 20px;
+  border-top: 1px solid var(--sidebar-border-color, #e2e8f0);
+}
+
+.close-action-btn {
+  padding: 7px 16px;
+  background: var(--button-gray-1, #f1f5f9);
+  color: var(--text-primary-color, #334155);
+  border: 1px solid var(--sidebar-border-color, #cbd5e1);
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+
+  &:hover {
+    background: #e2e8f0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
