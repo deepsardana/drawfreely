@@ -14,10 +14,10 @@
   - **Kubernetes & Cloud Native**: Pods, Services, Ingress, Deployments, ConfigMaps, Secrets, PersistentVolumes, Namespaces, Docker, Helm, Prometheus, Grafana, Envoy, Istio, ArgoCD.
   - **Networking & Infrastructure**: Routers, Switches, Firewalls, Load Balancers, Server Racks, Database Servers, Wi-Fi APs, Fiber Links, VPN Gateways, Internet WAN, CCTV, Workstations.
 - **Multi-Page Whiteboard Tabs**: Full multi-page support with bottom tab bar (`Page 1`, `Page 2`, `+` add, rename, duplicate, delete), preserved in local storage.
-- **Notion & Jira Integration**:
-  - **Notion**: Save whiteboard diagrams and flowcharts directly into Notion pages with automatic block embeds and Markdown code snippets.
-  - **Jira**: Attach rendered PNG diagrams and `.drawfreely` whiteboard files directly to Jira issues with automated comment summaries.
-- **Custom Branding**: Clean visual identity featuring the fountain pen with ink flow emblem.
+- **Enterprise Vendor Presentation Mode**: One-click presentation mode with zen clean layout, auto-fitting, and high-impact framing for vendor reviews.
+- **Word (.doc) & PDF 1.4 Export**: Export complete multi-page architecture dossiers with embedded bill-of-materials tables and metadata.
+- **525+ Official Vector Stencils**: AWS, Google Cloud (GCP), Microsoft Azure, Kubernetes, Cisco, Fortinet, and IBM Enterprise architecture libraries.
+- **Custom Branding**: Clean visual identity featuring the modern enterprise aesthetic.
 - **Production-Ready**: Comes with optimized Docker containerization, Docker Compose, Kubernetes manifests, and a Helm chart.
 
 ---
@@ -27,8 +27,8 @@
 - [DrawFreely Architecture & Whiteboard Superpowers](#drawfreely-architecture--whiteboard-superpowers)
   - [Cloud & Architecture Shapes](#cloud--architecture-shapes)
   - [Multi-Page Tabs Bar](#multi-page-tabs-bar)
-  - [Notion Integration](#notion-integration)
-  - [Jira Integration](#jira-integration)
+  - [Vendor Presentation Mode](#vendor-presentation-mode)
+  - [DOC & PDF Export](#doc--pdf-export)
 - [Quickstart (Local Node.js)](#quickstart-local-nodejs)
 - [Docker](#docker)
   - [Build the Image](#build-the-image)
